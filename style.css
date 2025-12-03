@@ -1,0 +1,95 @@
+/* MOVING BACKGROUND */
+body {
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  animation: floatBg 40s linear infinite;
+  transition: background 1s ease-in-out;
+}
+
+@keyframes floatBg {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* PLAYER UI */
+.player {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.track-art {
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #000;
+}
+
+.track-name {
+  font-size: 2.5rem;
+}
+
+.track-artist {
+  font-size: 1.3rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttons i {
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons i:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.slider_container {
+  width: 75%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.seek_slider, .volume_slider {
+  width: 60%;
+  height: 5px;
+  appearance: none;
+  background: #fff;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
